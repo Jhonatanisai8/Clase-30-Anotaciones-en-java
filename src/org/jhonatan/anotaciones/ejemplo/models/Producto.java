@@ -1,10 +1,14 @@
 package org.jhonatan.anotaciones.ejemplo.models;
 
 import java.time.LocalDate;
+import org.jhonatan.anotaciones.ejemplo.JsonAtribute;
 
 public class Producto {
 
+    //nombre y precio se van a expiortar o comvertir en este jSON
+    @JsonAtribute
     private String nombre;
+    @JsonAtribute
     private long precio;
     private LocalDate fecha;
 
