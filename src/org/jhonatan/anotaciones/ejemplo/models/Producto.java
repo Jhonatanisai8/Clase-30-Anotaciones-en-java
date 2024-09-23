@@ -6,7 +6,7 @@ import org.jhonatan.anotaciones.ejemplo.JsonAtribute;
 public class Producto {
 
     //nombre y precio se van a expiortar o comvertir en este jSON
-    @JsonAtribute(nombre = "descripción")
+    @JsonAtribute(capitalizar = true)
     private String nombre;
     @JsonAtribute(nombre = "precio")
     private long precio;

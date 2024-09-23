@@ -15,5 +15,7 @@ public @interface JsonAtribute {
 
     /*atributos*/
     String nombre() default "";
-    
+
+    boolean capitalizar() default false;
+
 }
