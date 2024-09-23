@@ -2,6 +2,7 @@ package org.jhonatan.anotaciones.ejemplo.procesador;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
+import java.util.stream.Collectors;
 import org.jhonatan.anotaciones.ejemplo.JsonAtribute;
 import org.jhonatan.anotaciones.ejemplo.procesador.exception.JsonSerializadorException;
 
@@ -35,9 +36,16 @@ public class JsonSerializador {
                             //otra forma
                             nuevoValor = nuevoValor.substring(0, 1).toUpperCase()
                                     + nuevoValor.substring(1).toLowerCase();
-                             */
+                            
                             nuevoValor = String.valueOf(nuevoValor.charAt(0))
                                     + nuevoValor.substring(1).toLowerCase();
+                             */
+
+                            //convertimos  la primera letra de cada palabra en mayuscula
+                            nuevoValor = Arrays.stream(nuevoValor.split(" "))
+                                    .map(palabra -> palabra.substring(0, 1).toUpperCase()
+                                    + palabra.substring(1).toLowerCase())
+                                    .collect(Collectors.joining(" "));
                             //seteamos el nuevo valor
                             f.set(object, nuevoValor);
                         }

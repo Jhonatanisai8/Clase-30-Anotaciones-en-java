@@ -12,7 +12,7 @@ public class EjemploAnotacion01 {
 
         //seteamos atributos
         pro.setFecha(LocalDate.now());
-        pro.setNombre("laptop Lenovo G40");
+        pro.setNombre("laptop LENOVO G40");
         pro.setPrecio(3450L);
 
         System.out.println("Json: " + JsonSerializador.convertirJson(pro));
